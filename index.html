@@ -5,20 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"  href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{
             margin: 0px;
             padding: 0px;
         }
-        body{
-            height: 100vh;
+        
+         body{
+            /* height: 100vh; */
             width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: #f5f5f5;
-        }
+         }
+         .section1{
+            width: 70%;
+            height: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+         }
+         .ed-table{
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 50vw;
+            height: 30vh
+         }
+         .profile-data{
+            color: rgb(177, 193, 208);
+         }
+         td,th{
+            border: 1px solid #000;
+            padding: 1rem 1rem 1rem 1rem;
+         }
+         .section2{
+            width: 70%;
+         }
+         .section3{
+            width: 70%;
+         }
+         .section4{
+            width: 70%;
+         }
+         .profile-img{
+            height: 150px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+         }
+         .profile-img1{
+            height: 80%;
+            width: 80%;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+    
+         .ccolor{
+            background: #780206;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         }
+         .cccolor,.ed-table th{
+            color: #780206;
+         }
+         .section5{
+            width: 70%;
+            
+         }
+         .section5 li{
+            list-style: square;
+            margin-left: 1rem;
+         }
+         .section6{
+            width: 70%;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+         }
+         .icon-style{
+            color: #f5f5f5;
+         }
+
     </style>
 </head>
 <body>
-    <h1>hiiii broooo</h1>
-    
+    <div class="section1 ccolor">
+        <div class="profile-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdTT9eH7KU0t6Xqo8YwG-5gb3gXUzjkGLaw&s" alt="cat" height="200px" class="profile-img1">
+        </div>
+        <div class="profile-data">
+            <h1>Hans Rohit</h1>
+            <h3>hansrohit031@gmail.com</h3>
+        </div>
+    </div>  <br>
+    <div class="section2">
+        <div class="description">
+            <h1 class="cccolor">
+                OBJECTIVE
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil debitis, voluptates est doloremque vel in, eaque, quae corporis error quasi dignissimos nulla corrupti aperiam rem dolorem maxime excepturi ipsa!</p>
+        </div>
+    </div>  
+    <br>
+    <div class="section3">
+        <h1 class="title cccolor">
+            EDUCATION</h1>
+        </div>
+        <table class="ed-table">
+            <tr>
+                <th>Degree</th>
+                <th>Campus</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>deg1</td>
+                <td>siet</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>deg2</td>
+                <td>siet</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>deg2</td>
+                <td>siet</td>
+                <td>85%</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="section4">
+        <h1 class="cccolor">INTERNSHIPS</h1>
+        <br>
+        <span class="spanstyle cccolor"><h3>Software Developer</h3></span>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, possimus omnis delectus aliquid eos excepturi similique accusantium, esse iste praesentium nisi illum magnam dolorem ut veritatis vel quos? Assumenda, dolore!</p>
+        <br>
+        <p><span class="spanstyle2 cccolor"><b>tcs pvt ltd </b></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, ea. Iste harum quis dicta iure optio eum cumque quibusdam impedit perferendis minus maiores minima vero, exercitationem expedita libero ab iusto?</p>
+    </div><br>
+    <div class="section5">
+        <h1 class="cccolor">Skills</h1>
+        <br>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>MySql</li>
+        </ul>
+    </div><br>
+    <div class="section6 ccolor">
+        <a href="tel:+9080867217">
+        <i class="fa fa-phone-square icon-style" aria-hidden="true"></i>
+    </a>
+    <a href="mailto:hansrohit031">
+        <i class="fa fa-envelope icon-style" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/feed/" target="_blank">
+    <i class="fa fa-linkedin-square icon-style" aria-hidden="true"></i>
+    </a>
+</div>
 </body>
 </html>
