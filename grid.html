@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h{
+            height: 11rem;
+            width: 90%;
+        }
+        .r{
+            background-color: red;
+            animation: 2s myanimation infinite;
+            /* grid-row: 3/4;
+            grid-column: 2/3; */
+        }
+        .g{
+            background-color: green;
+        }
+        .y{
+            background-color: yellow;
+        }
+        .p{
+            background-color: purple;
+        }
+        .v{
+            background-color: violet;
+        }
+        .bl{
+            background-color: blue;
+        }
+        .c{
+            background-color: cyan;
+        }
+        .b{
+            background-color: brown;
+            
+        }
+        .o{
+            background-color: orange;
+            /* grid-row: 1/2;
+            grid-column:1/2 ; */
+        }
+        @media screen and (min-width:400px) {
+            .b{
+            background-color: rgb(133, 24, 24);
+        }
+        }
+        .container{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns: repeat(3,33%);
+            grid-template-rows: repeat(3,33%);
+            grid-gap: 1rem;
+        }
+
+        @keyframes myanimation {
+            0%{
+                transform: translateY(-100%);
+                rotate: 90deg;
+                scale: 10%;
+                opacity: 0;
+            }
+            50%{
+                transform: translateY(-30%);
+                rotate: 180deg;
+                scale: 50%;
+                opacity: 0.5;
+            }
+            100%{
+                transform: translateY(0%);
+                rotate: 360deg;
+                scale: 100%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="r h">r</div>
+    <div class="b h">b</div>
+    <div class="g h">g</div>
+    <div class="o h">o</div>
+    <div class="y h">y</div>
+    <div class="v h">v</div>
+    <div class="bl h">bl</div>
+    <div class="c h">c</div>
+    <div class="p h">p</div>
+    </div>
+</body>
+</html>

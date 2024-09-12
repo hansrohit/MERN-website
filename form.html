@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        input{
+            border: 2px solid rgba(125, 74, 173, 0.655);
+            border-radius: 20px;
+            background-color: #ffffffb0;
+        }
+        .form1{  
+            position: fixed;
+            top: 10%;
+            bottom: 50;
+            left: 20%;
+            right: 20%;
+            
+            text-align: center;
+            width: 60vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* gap: 1rem; */
+            background-color: rgba(20, 21, 21, 0.315);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba(201, 45, 45, 0.18);
+        }
+        .but1{
+            height: 2rem;
+            width: 8rem;
+            border: 2px solid rgba(125, 74, 173, 0.655);
+            border-radius: 20px;
+        }
+        .but1:hover{
+            background-color: rgba(125, 74, 173, 0.253); 
+        }
+        .but1:active{
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body> 
+    <div class="form1">
+        <h1>Form</h1>
+        <form  onsubmit="myscript(event)">
+            <label for="name"><b>Name: </b></label>
+            <input type="text" name="name" id="name" autocomplete="on"><br><br>
+            <label for="mail"><b>E-mail: </b></label>
+            <input type="email" name="mail" id="mail" autocomplete="on"><br><br>
+            <label for="phone"><b>Phone: </b></label>
+            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="+91 9080867217" required><br><br>
+            <button type="submit" class="but1">Submit</button>
+            
+        </form>
+    </div>
+    <script>
+        function myscript(event) {
+            event.preventDefault();
+            var nam=document.getElementById("name").value;
+            var telp=document.getElementById("phone").value;
+            var mail=document.getElementById("mail").value;
+            alert(nam);
+            console.log(nam+" "+telp+" "+mail);
+        }
+    </script>
+</body>
+</html>
