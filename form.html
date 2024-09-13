@@ -47,25 +47,35 @@ border: 1px solid rgba(201, 45, 45, 0.18);
             width: 8rem;
             border: 2px solid rgba(125, 74, 173, 0.655);
             border-radius: 20px;
+            animation: myani 5s infinite;
         }
         .but1:hover{
             background-color: rgba(125, 74, 173, 0.253); 
+            opacity: 0.5;
         }
-        .but1:active{
-            transform: scale(0.9);
+        @keyframes myani {
+            from{
+                /* scale: 0%; */
+                opacity: 0;
+            }
+            to{
+                /* scale: 100%; */
+                opacity: 1;
+            }
+            
         }
     </style>
 </head>
 <body> 
     <div class="form1">
         <h1>Form</h1>
-        <form  onsubmit="myscript(event)">
+        <form class="form2" onsubmit="myscript(event)">
             <label for="name"><b>Name: </b></label>
             <input type="text" name="name" id="name" autocomplete="on"><br><br>
             <label for="mail"><b>E-mail: </b></label>
             <input type="email" name="mail" id="mail" autocomplete="on"><br><br>
             <label for="phone"><b>Phone: </b></label>
-            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="+91 9080867217" required><br><br>
+            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="+91 9080867217"><br><br>
             <button type="submit" class="but1">Submit</button>
             
         </form>
@@ -76,8 +86,13 @@ border: 1px solid rgba(201, 45, 45, 0.18);
             var nam=document.getElementById("name").value;
             var telp=document.getElementById("phone").value;
             var mail=document.getElementById("mail").value;
-            alert(nam);
-            console.log(nam+" "+telp+" "+mail);
+            let data ={
+                username:nam,
+                phone:telp,
+                email:mail
+            }
+            const{username,phone,email}=data;
+            console.log(username+" "+phone+" "+email);
         }
     </script>
 </body>
